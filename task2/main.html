@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+  <script src='./app.js'></script>
+
+ </head>
+ <body>
+    <h1 id='test' class='t1 t2 t3 t4 t5'>Css classes framework</h1>
+ </body>
+
+ <script>
+    $('#test').addClass('cucu1','cucu2','cucu3');
+    $('#test').addClass('cucu4');
+    var a = $('#test').getClasses();
+    console.log(a);
+
+
+    $('#test').removeClass('cucu1', 'cucu3');
+    $('#test').removeClass('cucu2');
+    var a = $('#test').getClasses();
+    console.log(a);
+
+    $('#test').toggleClass('t1', 't2');
+    $('#test').toggleClass('t3');
+    var a = $('#test').getClasses();
+    console.log(a);
+
+    // $('test').clear();
+    // console.log(a);
+
+    console.log($('#test').hasClasses('t4'));
+    console.log($('#test').hasClasses('t1'));
+
+    $('#test').toggleClass('t4', 't1');
+    console.log(a);
+
+   // $('test').addPrefix('t4','cucu4','md', -1);
+    $('#test').addPrefix('md', 1);
+    console.log(a);
+ </script>
+</html>

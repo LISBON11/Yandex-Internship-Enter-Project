@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+
+  <script src='./app.js'></script>
+  <script src='./date.js'></script>
+ </head>
+ <body>
+    <h1 id='test'>Ваш маршрут:</h1>
+
+ </body>
+
+ <script>
+    var journeyCreater = new JourneyCreater(cards);
+    var sortedCards = journeyCreater.sortCards();
+
+    var body = document.querySelector('body');
+
+    sortedCards.forEach((card)=>{
+        var row = document.createElement('p');
+        row.innerText = card;
+
+        body.appendChild(row);
+    })
+ </script>
+</html>
